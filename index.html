@@ -5,10 +5,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Phongphat Luangphitak - Web Developer Profile</title>
-    <link rel="icon" href="https://avatars.githubusercontent.com/u/120770345?s=400&u=23ee2544a857e27b2a6eef474dee2bf750ed0f70&v=4" type="image/png">
+    <link rel="icon"
+        href="https://avatars.githubusercontent.com/u/120770345?s=400&u=23ee2544a857e27b2a6eef474dee2bf750ed0f70&v=4"
+        type="image/png">
     <script src="https://cdn.tailwindcss.com"></script>
-</head>
 
+    <style>
+        .image-container {
+            position: relative;
+            display: inline-block;
+        }
+
+        /* Hide the popup initially */
+        .popup {
+            display: none;
+            position: fixed;
+            /* Make it fixed to the viewport */
+            top: 0;
+            /* Position at the top of the page */
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+            /* Make sure it's above everything else */
+            width: auto;
+            /* Full width */
+            height: auto;
+            max-height: 100vh;
+            /* Ensure it doesn't exceed viewport height */
+            background-color: rgba(255, 255, 255, 0.9);
+            /* Slight background overlay */
+            padding: 20px;
+        }
+
+        /* Show the popup when hovering over the container */
+        .image-container:hover .popup {
+            display: block;
+        }
+
+        .popup img {
+            width: 100%;
+            /* Adjust size to full width of the viewport */
+            height: auto;
+            max-height: 100vh;
+            object-fit: contain;
+            border-radius: 8px;
+        }
+
+        /* Styling for the main images */
+    </style>
+</head>
 
 <body class="bg-gray-100 text-gray-800">
     <div class="max-w-5xl mx-auto p-6 bg-white shadow-lg rounded-lg">
@@ -113,8 +158,98 @@
                 <li>Start Building Microservices with Golang from Ruangyot Nanchiang</li>
             </ul>
         </section>
-                <section class="p-4">
+
+        <section class="p-4">
             <h2 class="text-3xl font-bold text-blue-600 border-b-2 pb-2 border-gray-300 mb-4">My Project</h2>
+            <div class="bg-white shadow-lg rounded-lg overflow-hidden w-full max-w-4xl mx-auto my-4">
+                <div class="py-4 bg-blue-500 text-white px-4">
+                    <h1 class="text-center text-2xl font-bold">Psychiatric Patient Tracking Web Application</h1>
+                    <p class="mt-4">
+                        The Psychiatric Patient Tracking Web Application helps healthcare providers track and manage psychiatric patients efficiently. It includes features such as:
+                    </p>
+                    <ul class="list-disc pl-4 mt-4">
+                        <li><strong>LINE Notify:</strong> Sends alerts when a patient misses an appointment, allowing for timely follow-up.</li>
+                        <li><strong>Patient Management:</strong> Allows users to add, edit, and delete patient information and track appointments.</li>
+                        <li><strong>Mapping with Leaflet:</strong> Visualizes patient locations on a map, with options to open in Google Maps for further navigation.</li>
+                        <li><strong>Data Visualization:</strong> Provides charts for viewing appointment trends and other patient statistics.</li>
+                        <li><strong>Data Import/Export:</strong> Import and export patient data in Excel format for seamless data management.</li>
+                    </ul>
+                    <h2 class="text-xl font-bold mt-4">Tools Used for Development:</h2>
+                    <ul class="list-disc pl-4 mt-2">
+                        <li><strong>Express:</strong> Backend framework for building the application.</li>
+                        <li><strong>Vite-Express:</strong> Used to streamline development with fast builds.</li>
+                        <li><strong>MariaDB:</strong> Database for storing patient information.</li>
+                        <li><strong>React:</strong> JavaScript library for creating the user interface.</li>
+                        <li><strong>Leaflet & React-Leaflet:</strong> Used to display patient locations on a map.</li>
+                        <li><strong>React-ChartJS-2:</strong> For creating interactive charts to visualize data.</li>
+                        <li><strong>React-to-Print & xlsx:</strong> Enables printing to PDF and exporting data to Excel format.</li>
+                    </ul>
+                </div>
+                
+                <div class="flex justify-center items-center px-4 py-4 space-x-4">
+                    <div class="image-container">
+                        <img src="./img/login_map.png" class="main-image" alt="Login Map">
+                        <div class="popup">
+                            <img src="./img/login_map.png" alt="Enlarged Login Map">
+                        </div>
+                    </div>
+                    <div class="image-container">
+                        <img src="./img/Screenshot 2024-04-17 162404.png" class="main-image" alt="Tracking Map">
+                        <div class="popup">
+                            <img src="./img/Screenshot 2024-04-17 162404.png" alt="Enlarged Tracking Map">
+                        </div>
+                    </div>
+                    <div class="image-container">
+                        <img src="./img/สำเนาของ F_All.png" class="main-image" alt="F All">
+                        <div class="popup">
+                            <img src="./img/สำเนาของ F_All.png" alt="Enlarged F All">
+                        </div>
+                    </div>
+                    <div class="image-container">
+                        <img src="./img/Screenshot 2024-04-01 132034.png" class="main-image" alt="Screenshot">
+                        <div class="popup">
+                            <img src="./img/Screenshot 2024-04-01 132034.png" alt="Enlarged Screenshot">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white shadow-lg rounded-lg overflow-hidden w-full max-w-4xl mx-auto my-4">
+                <div class="py-4 bg-blue-500 text-white px-4">
+                    <h1 class="text-center text-2xl font-bold">Monitor Server Web Application</h1>
+                    <p class="mt-4">
+                        The Monitor Server Web Application can display the operational status of servers in real-time. It includes features such as:
+                    </p>
+                    <ul class="list-disc pl-4 mt-4">
+                        <li><strong>LINE Notify:</strong> Sends server status updates directly to LINE, notifying when servers go online or offline.</li>
+                        <li><strong>Add, Edit, Delete Servers:</strong> Allows users to manage server details, including adding new servers, editing existing ones, or removing servers from the system.</li>
+                        <li><strong>View Historical Status:</strong> Provides the ability to view past server statuses for monitoring and analysis.</li>
+                    </ul>
+                    <h2 class="text-xl font-bold mt-4">Tools Used for Development:</h2>
+                    <ul class="list-disc pl-4 mt-2">
+                        <li><strong>Express:</strong> Backend framework for building web applications.</li>
+                        <li><strong>Socket.IO:</strong> Enables real-time, bidirectional communication between the server and the client.</li>
+                        <li><strong>ssh2-promise:</strong> A library for establishing SSH connections and executing commands on remote servers.</li>
+                        <li><strong>React:</strong> Frontend JavaScript library for building user interfaces.</li>
+                    </ul>
+                </div>
+                
+                <div class="flex justify-center items-center px-4 py-4 space-x-4">
+                    <div class="image-container">
+                        <img src="./img/server.png" class="main-image" alt="Server Image">
+                        <div class="popup">
+                            <img src="./img/server.png" alt="Enlarged Server Image">
+                        </div>
+                    </div>
+                    <div class="image-container">
+                        <img src="./img/Screenshot 2024-05-06 133710.png" class="main-image" alt="Server Screenshot">
+                        <div class="popup">
+                            <img src="./img/Screenshot 2024-05-06 133710.png" alt="Enlarged Server Screenshot">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div class="bg-white shadow-lg rounded-lg overflow-hidden w-full max-w-4xl mx-auto my-2">
                 <div class="text-center py-4 bg-blue-500 text-white">
                     <h1 class="text-2xl font-bold">US Choropleth Map</h1>
@@ -146,6 +281,7 @@
                 <iframe src="https://tomphongphath.github.io/JavaScriptCalculator/" class="w-full h-[400px]"></iframe>
             </div>
         </section>
+
     </div>
 </body>
 
