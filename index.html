@@ -50,14 +50,26 @@
             object-fit: contain;
             border-radius: 8px;
         }
-
-        /* Styling for the main images */
+        body {
+        scroll-behavior: smooth;
+    }
     </style>
 </head>
 
-<body class="bg-gray-100 text-gray-800">
+<body class="bg-gray-100 text-gray-800 pt-16">
+    <nav class="bg-blue-500 p-4 fixed w-full top-0 z-50">
+        <div class="flex justify-center space-x-6">
+            <a href="#me" class="text-white font-semibold hover:text-gray-300">Me</a>
+            <a href="#summary" class="text-white font-semibold hover:text-gray-300">Summary</a>
+            <a href="#work-experience" class="text-white font-semibold hover:text-gray-300">Work Experience</a>
+            <a href="#education" class="text-white font-semibold hover:text-gray-300">Education</a>
+            <a href="#skills" class="text-white font-semibold hover:text-gray-300">Skills</a>
+            <a href="#certificates" class="text-white font-semibold hover:text-gray-300">Certificates</a>
+            <a href="#projects" class="text-white font-semibold hover:text-gray-300">Projects</a>
+        </div>
+    </nav>
     <div class="max-w-5xl mx-auto p-6 bg-white shadow-lg rounded-lg">
-        <header class="flex items-center justify-between mb-10">
+        <section id="me" class="flex items-center justify-between mb-10">
             <div class="w-1/4">
                 <img src="https://scontent.fbkk8-4.fna.fbcdn.net/v/t39.30808-6/448609315_1788098958624315_7916768260495188177_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeEIUr4-ZITGuHikYo6WZkeocJ0Nt2OCjGlwnQ23Y4KMaXrqWlRc6t63-eVsW8TVJe93v1e3ecIcoZisjEE8Ps2l&_nc_ohc=eLOnArc4c2IQ7kNvgHiLUns&_nc_ht=scontent.fbkk8-4.fna&_nc_gid=Aiq4zkm9CRvpK2kcXWetPf3&oh=00_AYCiv5Txh5R5-UQ_7kGAhqzhtDlD9gR1VYvScuRVy3h7fA&oe=67183B3D"
                     alt="Profile Photo" class="rounded-lg shadow-lg">
@@ -76,9 +88,9 @@
                             class="text-blue-500 hover:underline">tomphongphath.github.io/Profile</a></p>
                 </div>
             </div>
-        </header>
+        </section>
 
-        <section class="mb-8">
+        <section id="summary" class="mb-8">
             <h2 class="text-3xl font-bold text-blue-600 border-b-2 pb-2 border-gray-300 mb-4">Summary</h2>
             <p class="leading-relaxed text-gray-800">Currently working as a Web Developer at The Act Tutoring School and
                 previously served as an IT Officer at Khon San Hospital, where he was responsible for managing servers,
@@ -92,7 +104,7 @@
             </p>
         </section>
 
-        <section class="mb-8">
+        <section id="work-experience" class="mb-8">
             <h2 class="text-3xl font-bold text-blue-600 border-b-2 pb-2 border-gray-300 mb-4">Work Experience</h2>
 
             <div class="mb-6">
@@ -129,13 +141,13 @@
             </div>
         </section>
 
-        <section class="mb-8">
+        <section id="education" class="mb-8">
             <h2 class="text-3xl font-bold text-blue-600 border-b-2 pb-2 border-gray-300 mb-4">Education</h2>
             <p><strong>Mahasarakham Rajabhat University</strong></p>
             <p>Bachelor's Degree in Information Technology, GPA: 3.08</p>
         </section>
 
-        <section class="mb-8">
+        <section id="skills" class="mb-8">
             <h2 class="text-3xl font-bold text-blue-600 border-b-2 pb-2 border-gray-300 mb-4">Skills</h2>
             <ul class="list-disc list-inside">
                 <li><strong>Programming Languages:</strong> JavaScript, HTML, CSS, SQL, Dart, PHP, Delphi</li>
@@ -145,7 +157,7 @@
             </ul>
         </section>
 
-        <section>
+        <section id="certificates" class="mb-8">
             <h2 class="text-3xl font-bold text-blue-600 border-b-2 pb-2 border-gray-300 mb-4">Certificates</h2>
             <ul class="list-disc list-inside">
                 <li>Full Stack Development from freeCodeCamp.org</li>
@@ -159,20 +171,26 @@
             </ul>
         </section>
 
-        <section class="p-4">
-            <h2 class="text-3xl font-bold text-blue-600 border-b-2 pb-2 border-gray-300 mb-4">My Project</h2>
+        <section id="projects" class="mb-8">
+            <h2 class="text-3xl font-bold text-blue-600 border-b-2 pb-2 border-gray-300 mb-4">Project</h2>
             <div class="bg-white shadow-lg rounded-lg overflow-hidden w-full max-w-4xl mx-auto my-4">
                 <div class="py-4 bg-blue-500 text-white px-4">
                     <h1 class="text-center text-2xl font-bold">Psychiatric Patient Tracking Web Application</h1>
                     <p class="mt-4">
-                        The Psychiatric Patient Tracking Web Application helps healthcare providers track and manage psychiatric patients efficiently. It includes features such as:
+                        The Psychiatric Patient Tracking Web Application helps healthcare providers track and manage
+                        psychiatric patients efficiently. It includes features such as:
                     </p>
                     <ul class="list-disc pl-4 mt-4">
-                        <li><strong>LINE Notify:</strong> Sends alerts when a patient misses an appointment, allowing for timely follow-up.</li>
-                        <li><strong>Patient Management:</strong> Allows users to add, edit, and delete patient information and track appointments.</li>
-                        <li><strong>Mapping with Leaflet:</strong> Visualizes patient locations on a map, with options to open in Google Maps for further navigation.</li>
-                        <li><strong>Data Visualization:</strong> Provides charts for viewing appointment trends and other patient statistics.</li>
-                        <li><strong>Data Import/Export:</strong> Import and export patient data in Excel format for seamless data management.</li>
+                        <li><strong>LINE Notify:</strong> Sends alerts when a patient misses an appointment, allowing
+                            for timely follow-up.</li>
+                        <li><strong>Patient Management:</strong> Allows users to add, edit, and delete patient
+                            information and track appointments.</li>
+                        <li><strong>Mapping with Leaflet:</strong> Visualizes patient locations on a map, with options
+                            to open in Google Maps for further navigation.</li>
+                        <li><strong>Data Visualization:</strong> Provides charts for viewing appointment trends and
+                            other patient statistics.</li>
+                        <li><strong>Data Import/Export:</strong> Import and export patient data in Excel format for
+                            seamless data management.</li>
                     </ul>
                     <h2 class="text-xl font-bold mt-4">Tools Used for Development:</h2>
                     <ul class="list-disc pl-4 mt-2">
@@ -182,10 +200,11 @@
                         <li><strong>React:</strong> JavaScript library for creating the user interface.</li>
                         <li><strong>Leaflet & React-Leaflet:</strong> Used to display patient locations on a map.</li>
                         <li><strong>React-ChartJS-2:</strong> For creating interactive charts to visualize data.</li>
-                        <li><strong>React-to-Print & xlsx:</strong> Enables printing to PDF and exporting data to Excel format.</li>
+                        <li><strong>React-to-Print & xlsx:</strong> Enables printing to PDF and exporting data to Excel
+                            format.</li>
                     </ul>
                 </div>
-                
+
                 <div class="flex justify-center items-center px-4 py-4 space-x-4">
                     <div class="image-container">
                         <img src="./img/login_map.png" class="main-image" alt="Login Map">
@@ -218,22 +237,28 @@
                 <div class="py-4 bg-blue-500 text-white px-4">
                     <h1 class="text-center text-2xl font-bold">Monitor Server Web Application</h1>
                     <p class="mt-4">
-                        The Monitor Server Web Application can display the operational status of servers in real-time. It includes features such as:
+                        The Monitor Server Web Application can display the operational status of servers in real-time.
+                        It includes features such as:
                     </p>
                     <ul class="list-disc pl-4 mt-4">
-                        <li><strong>LINE Notify:</strong> Sends server status updates directly to LINE, notifying when servers go online or offline.</li>
-                        <li><strong>Add, Edit, Delete Servers:</strong> Allows users to manage server details, including adding new servers, editing existing ones, or removing servers from the system.</li>
-                        <li><strong>View Historical Status:</strong> Provides the ability to view past server statuses for monitoring and analysis.</li>
+                        <li><strong>LINE Notify:</strong> Sends server status updates directly to LINE, notifying when
+                            servers go online or offline.</li>
+                        <li><strong>Add, Edit, Delete Servers:</strong> Allows users to manage server details, including
+                            adding new servers, editing existing ones, or removing servers from the system.</li>
+                        <li><strong>View Historical Status:</strong> Provides the ability to view past server statuses
+                            for monitoring and analysis.</li>
                     </ul>
                     <h2 class="text-xl font-bold mt-4">Tools Used for Development:</h2>
                     <ul class="list-disc pl-4 mt-2">
                         <li><strong>Express:</strong> Backend framework for building web applications.</li>
-                        <li><strong>Socket.IO:</strong> Enables real-time, bidirectional communication between the server and the client.</li>
-                        <li><strong>ssh2-promise:</strong> A library for establishing SSH connections and executing commands on remote servers.</li>
+                        <li><strong>Socket.IO:</strong> Enables real-time, bidirectional communication between the
+                            server and the client.</li>
+                        <li><strong>ssh2-promise:</strong> A library for establishing SSH connections and executing
+                            commands on remote servers.</li>
                         <li><strong>React:</strong> Frontend JavaScript library for building user interfaces.</li>
                     </ul>
                 </div>
-                
+
                 <div class="flex justify-center items-center px-4 py-4 space-x-4">
                     <div class="image-container">
                         <img src="./img/server.png" class="main-image" alt="Server Image">
@@ -283,6 +308,19 @@
         </section>
 
     </div>
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                const offset = 80; // ชดเชยระยะห่างของ Navbar
+                window.scrollTo({
+                    top: target.offsetTop - offset,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>
